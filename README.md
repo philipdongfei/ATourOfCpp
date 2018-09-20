@@ -48,5 +48,26 @@ Using **auto**, we avoid redundancy and writing long type names.
 
 ---------------------------------------
 ## Chapter 2 User-Defined Types
+### 2.1 Introduction
+  Types built out of the built-in types using C++'s abstraction mechanisms are called *user-defined types*.
 
------------------------------------
+### 2.2 Structures
+(```)
+struct Vector {
+    int sz; //number of elements
+    double* elem;   //pointer to elements
+};
+(```)
+
+### 2.3 Classes
+  A class is defined to have a set of *members*, which can be data, function, or type members. The interface is defined by the **public** members of a class, and **private** members are accessible only through that interface.
+
+### 2.4 Unions
+  A **union** is a **struct** in which all members are allocated at the same address so that the **union** occupies only as much space as its largest member.
+
+### 2.5 Enumerations
+  Enumerations are used to represent small sets of integer values.
+  By default, an **enum class** has only assignment, initialization, and comparisons (e.g., == and <; 1.5)
+defined.
+
+
