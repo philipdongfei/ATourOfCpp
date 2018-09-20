@@ -46,3 +46,7 @@ Using **auto**, we avoid redundancy and writing long type names.
   When we don't want to modify an argument, but still don't want the cost of copying, we use a const reference.
   using **nullptr** eliminates potential confusion between integers (such as **0** or **NULL**) and pointers(such as **nullptr**).
 
+---------------------------------------
+## Chapter 2 User-Defined Types
+
+-----------------------------------
