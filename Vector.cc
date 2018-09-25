@@ -10,6 +10,10 @@ Vector::Vector(int s)
 
 double& Vector::operator[](int i)
 {
+//    return elem[i];
+// Error Handling, Exceptions
+    if (i<0 || size()<=1)
+        throw out_of_range{"Vector::operator[]"};
     return elem[i];
 }
 
