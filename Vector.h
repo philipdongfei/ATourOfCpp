@@ -9,14 +9,42 @@ class Vector {
         }
         
         ~Vector() {delete[] elem;}  // destructor: release resources
+
+        Vector(const Vector& a);    // copy constructor
+        Vector& operator=(const Vector& a); // copy assignment
+
+        Vector(Vector&& a);     // move constructor
+        Vector& operator=(Vector&& a);  // move assignment
+
         
         double& operator[](int i);
+        const double& operator[](int i) const;
+
         int size()const;
     private:
         double* elem;       // elem points to an array of sz doubles
         int sz;
 
 };
+
+Vector::Vector(const Vector& a)  // copy constructor
+    :elem{new double[a.sz]},    // allocate space for elements
+    sz{a.sz}
+{
+    for (int i=0; i!=sz; ++i)
+        elem[i] = a.elem[i];
+}
+
+Vector& Vector::operator=(const Vector& a)    // copy assignment
+{
+    double* p = new double[a.sz];
+    for (int i=0; i!=a.sz; ++i)
+        p[i]=a.elem[i];
+    delete[] elem;    // delete old elements
+    elem = p;
+    sz = a.sz;
+    return *this;
+}
 
 // Abstract Types.
 // superclass
@@ -89,6 +117,14 @@ void h()
 // 4.5 class Hierarchies
 class Shape {
 public:
+    Shape(const Shape&)=delete;     // no copy operations
+    Shape& operator=(const Shape&)=delete;
+
+    Shape(Shape&&)=delete;  //no move operations
+    Shape& operator=(Shape&&)=delete;
+
+
+
     virtual Point center() const=0; // pure virtual
     virtual void  move(Point to)=0;
 

@@ -22,7 +22,7 @@
 
 ### 3.4.1 Exceptions
 
-(```)
+```
     void f(Vector& v)
     {
         //...
@@ -34,7 +34,8 @@
         }
         // ...
     }
-(```)
+
+```
 
  We put code for which we are interested in handling exceptions into a **try**-block. That attempted assignment to **v[v.size()]** will fail. Therefore, the **catch**-clause providing a handler for **out_of_range** will be entered.
 
