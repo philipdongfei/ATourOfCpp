@@ -6,7 +6,7 @@ using namespace std;
 class Vector {
     public:
         //Vector(int s):elem{new double[s]}, sz{s}{
-        Vector(int s) {
+        explicit Vector(int s) {
             // construct a Vector
             if (s<0)
                 throw length_error{"Vector constructor:negative size"};
