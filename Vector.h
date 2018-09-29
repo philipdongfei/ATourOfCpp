@@ -1,8 +1,13 @@
 //Vector.h
+#include    <iostream>
+#include    <stdexcept>
+
+using namespace std;
+
 
 class Vector {
     public:
-        Vector(int s):elem{new double[s]}, sz{z}   // constructor: acquire resources
+        Vector(int s):elem{new double[s]}, sz{s}   // constructor: acquire resources
         {
             for (int i=0; i!=s; ++i)    // initialize elements
                 elem[i]=0;
@@ -13,8 +18,11 @@ class Vector {
         Vector(const Vector& a);    // copy constructor
         Vector& operator=(const Vector& a); // copy assignment
 
+#if 0
         Vector(Vector&& a);     // move constructor
         Vector& operator=(Vector&& a);  // move assignment
+#endif
+
 
         
         double& operator[](int i);
@@ -26,6 +34,17 @@ class Vector {
         int sz;
 
 };
+template<typename T>
+T* begin(Vector<T>& x)
+{
+   return x.size()?&x[0]:nullptr;  // pointer to first element or nullptr
+}
+
+template<typename T>
+T* end(Vector<T>& x)
+{
+    return begin(x)+x.size();   // pointer to one-past-last elemented
+}
 
 Vector::Vector(const Vector& a)  // copy constructor
     :elem{new double[a.sz]},    // allocate space for elements
@@ -46,6 +65,7 @@ Vector& Vector::operator=(const Vector& a)    // copy assignment
     return *this;
 }
 
+#if 0
 // Abstract Types.
 // superclass
 class Container {
@@ -183,4 +203,4 @@ void Smiley::draw()const
     mouth->draw();
 }
 
-
+#endif
