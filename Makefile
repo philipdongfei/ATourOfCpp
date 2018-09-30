@@ -15,6 +15,8 @@ MyClass: MyClass.cc
 	g++ -o MyClass.out ${CCFLAGS} MyClass.cc
 Template_Func: Template_Func.cc T_Vector.h T_Vector.cc
 	g++ -o Template_Func.out ${CCFLAGS} Template_Func.cc T_Vector.h T_Vector.cc
+string_demo: string_demo.cc
+	g++ -o string_demo.out ${CCFLAGS} string_demo.cc
 
 
 
