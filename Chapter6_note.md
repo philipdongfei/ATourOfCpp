@@ -36,7 +36,7 @@ string s{"C++ is a general-purpose programming language"};   // OK: string is st
 
 | Selected Standard  | Library Headers      |
 |--------------------|----------------------|
-|-<algorithm>-       |copy(),find(),sort()  |
+|  algorithm         |copy(),find(),sort()  |
 
 
 
