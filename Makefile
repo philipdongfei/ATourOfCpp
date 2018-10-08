@@ -17,6 +17,12 @@ Template_Func: Template_Func.cc T_Vector.h T_Vector.cc
 	g++ -o Template_Func.out ${CCFLAGS} Template_Func.cc T_Vector.h T_Vector.cc
 string_demo: string_demo.cc
 	g++ -o string_demo.out ${CCFLAGS} string_demo.cc
+Reg_Search: Reg_Search.cc
+	g++ -o Reg_Search.out ${CCFLAGS} Reg_Search.cc
+Reg_Expre: Reg_Expre.cc
+	g++ -o Reg_Expre.out ${CCFLAGS} Reg_Expre.cc
+Reg_Group: Reg_Group.cc
+	g++ -o Reg_Group.out ${CCFLAGS} Reg_Group.cc
 
 
 
