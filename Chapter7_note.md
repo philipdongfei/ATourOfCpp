@@ -54,7 +54,7 @@
 - **{n}**    Exactly **n** times
 - **{n,}**   n or more times
 - **{n,m}**  At least n and at most m times
-- ** \* **      Zero or more, that is, {0,}
+- **\***      Zero or more, that is, {0,}
 - **+**      One or more, that is, {1,}
 - **?**      Optional (zero or one), that is {0,1}
 
