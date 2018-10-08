@@ -23,6 +23,18 @@ Reg_Expre: Reg_Expre.cc
 	g++ -o Reg_Expre.out ${CCFLAGS} Reg_Expre.cc
 Reg_Group: Reg_Group.cc
 	g++ -o Reg_Group.out ${CCFLAGS} Reg_Group.cc
+output_example: output_example.cc
+	g++ -o output_example.out ${CCFLAGS} output_example.cc
+input_example: input_example.cc
+	g++ -o input_example.out ${CCFLAGS} input_example.cc
+IO_UserDef: IO_UserDef.cc
+	g++ -o IO_UserDef.out ${CCFLAGS} IO_UserDef.cc
+Format_exp: Format_exp.cc
+	g++ -o Format_exp.out ${CCFLAGS} Format_exp.cc
+sstream_exp: sstream_exp.cc
+	g++ -o sstream_exp.out ${CCFLAGS} sstream_exp.cc
+
+
 
 
 
