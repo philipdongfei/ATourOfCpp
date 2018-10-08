@@ -42,7 +42,7 @@
 - **(**    Begin grouping
 - **)**    End grouping
 - **\**    Next character has a special meaning
-- *****    Zero or more (suffix operation)
+- ** * **    Zero or more (suffix operation)
 - **+**    One or more (suffix operation)
 - **?**    Optional(zero or one) (suffix operation)
 - **|**    Alternative(or)
@@ -54,7 +54,7 @@
 - **{n}**    Exactly **n** times
 - **{n,}**   n or more times
 - **{n,m}**  At least n and at most m times
-- *****      Zero or more, that is, {0,}
+- ** * **      Zero or more, that is, {0,}
 - **+**      One or more, that is, {1,}
 - **?**      Optional (zero or one), that is {0,1}
 
@@ -97,10 +97,10 @@
 
 **Regular Expression Grouping Examples**
 
-- **\d*\s\w+**      No groups (subpatterns)
-- **(\d*)\s(\w+)**    Two groups
-- **(\d*)(\s(\w+))+**  Two groups (groups do not nest)
-- **(\s*\w*)+**        One group; one or more subpatterns;
+- ** \d*\s\w+ **      No groups (subpatterns)
+- ** (\d*)\s(\w+) **    Two groups
+- ** (\d*)(\s(\w+))+ **  Two groups (groups do not nest)
+- ** (\s*\w*)+ **        One group; one or more subpatterns;
                        only the last subpattern is saved as a sub_match
 - **<(.*?)>(.*?)</\1>**  Three groups; the \1 means "same as group 1"
 
