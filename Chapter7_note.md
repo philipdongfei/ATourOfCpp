@@ -97,7 +97,7 @@
 
 **Regular Expression Grouping Examples**
 
-- **\\d*\\s\\w+**      No groups (subpatterns)
+- **\\d\*\\s\\w\+**      No groups (subpatterns)
 - **\(\\d\*\)\\s\(\\w\+\)**    Two groups
 - **\(\\d\*\)\(\\s\(\\w\+\)\)+**  Two groups (groups do not nest)
 - **\(\\s\*\\w\*\)\+**        One group; one or more subpatterns;
