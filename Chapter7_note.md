@@ -41,8 +41,8 @@
 - **}**    End count
 - **(**    Begin grouping
 - **)**    End grouping
-- **\**    Next character has a special meaning
-- ** * **    Zero or more (suffix operation)
+- **\\**    Next character has a special meaning
+- **\***    Zero or more (suffix operation)
 - **+**    One or more (suffix operation)
 - **?**    Optional(zero or one) (suffix operation)
 - **|**    Alternative(or)
@@ -97,10 +97,10 @@
 
 **Regular Expression Grouping Examples**
 
-- ** \d*\s\w+ **      No groups (subpatterns)
-- ** (\d*)\s(\w+) **    Two groups
-- ** (\d*)(\s(\w+))+ **  Two groups (groups do not nest)
-- ** (\s*\w*)+ **        One group; one or more subpatterns;
+- **\\d*\\s\\w\+**      No groups (subpatterns)
+- **\(\\d\*\)\\s\(\\w\+\)**    Two groups
+- **\(\\d\*\)\(\\s\(\\w\+\)\)\+ **  Two groups (groups do not nest)
+- **\(\\s\*\\w\*\)\+**        One group; one or more subpatterns;
                        only the last subpattern is saved as a sub_match
 - **<(.*?)>(.*?)</\1>**  Three groups; the \1 means "same as group 1"
 
