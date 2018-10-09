@@ -33,6 +33,17 @@ Format_exp: Format_exp.cc
 	g++ -o Format_exp.out ${CCFLAGS} Format_exp.cc
 sstream_exp: sstream_exp.cc
 	g++ -o sstream_exp.out ${CCFLAGS} sstream_exp.cc
+# chapter 9
+vector_exp: vector_exp.cc
+	g++ -o vector_exp.out ${CCFLAGS} vector_exp.cc
+list_exp: list_exp.cc 
+	g++ -o list_exp.out ${CCFLAGS} list_exp.cc 
+map_exp: map_exp.cc
+	g++ -o map_exp.out ${CCFLAGS} map_exp.cc
+unordermap_exp: unordermap_exp.cc
+	g++ -o unordermap_exp.out ${CCFLAGS} unordermap_exp.cc
+
+
 
 
 
