@@ -42,8 +42,16 @@ map_exp: map_exp.cc
 	g++ -o map_exp.out ${CCFLAGS} map_exp.cc
 unordermap_exp: unordermap_exp.cc
 	g++ -o unordermap_exp.out ${CCFLAGS} unordermap_exp.cc
-
-
+con_copy: con_copy.cc Entry.h 
+	g++ -o con_copy.out ${CCFLAGS} con_copy.cc Entry.h 
+iter_exp: iter_exp.cc
+	g++ -o iter_exp.out ${CCFLAGS} iter_exp.cc
+iter_gen: iter_gen.cc
+	g++ -o iter_gen.out ${CCFLAGS} iter_gen.cc
+stream_iter: stream_iter.cc
+	g++ -o stream_iter.out ${CCFLAGS} stream_iter.cc
+stream_simple: stream_simple.cc
+	g++ -o stream_simple.out ${CCFLAGS} stream_simple.cc
 
 
 

@@ -1,3 +1,0 @@
-Always look for the <b>bright</b> side of <b>life</b>
-<b>xml</b> <to>George</to>
-<note><from>John</from></note>
