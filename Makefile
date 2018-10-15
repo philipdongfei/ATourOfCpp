@@ -52,6 +52,14 @@ stream_iter: stream_iter.cc
 	g++ -o stream_iter.out ${CCFLAGS} stream_iter.cc
 stream_simple: stream_simple.cc
 	g++ -o stream_simple.out ${CCFLAGS} stream_simple.cc
+bitset_exp: bitset_exp.cc
+	g++ -o bitset_exp.out ${CCFLAGS} bitset_exp.cc
+# to fix function_exp, some error.
+function_exp: function_exp.cc
+	g++ -o function_exp.out -std=c++17 -O2 function_exp.cc
+functional_demo: functional_demo.cc
+	g++ -o functional_demo.out ${CCFLAGS} functional_demo.cc
+
 
 
 
