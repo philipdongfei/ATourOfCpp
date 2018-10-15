@@ -59,6 +59,14 @@ function_exp: function_exp.cc
 	g++ -o function_exp.out -std=c++17 -O2 function_exp.cc
 functional_demo: functional_demo.cc
 	g++ -o functional_demo.out ${CCFLAGS} functional_demo.cc
+# chapter12 
+errno_exp: errno_exp.cc
+	g++ -o errno_exp.out ${CCFLAGS} errno_exp.cc
+NumAlg_exp: NumAlg_exp.cc
+	g++ -o NumAlg_exp.out ${CCFLAGS} NumAlg_exp.cc
+random_exp: random_exp.cc
+	g++ -o random_exp.out ${CCFLAGS} random_exp.cc
+
 
 
 
