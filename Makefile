@@ -1,4 +1,5 @@
 CCFLAGS := -std=c++14 -O2
+LDFLAGS := -lpthread
 
 # chapter 1
 helloworld: HelloWorld.cc
@@ -67,9 +68,17 @@ NumAlg_exp: NumAlg_exp.cc
 random_exp: random_exp.cc
 	g++ -o random_exp.out ${CCFLAGS} random_exp.cc
 
-
-
-
+# chapter 13
+threads_error: threads_error.cc
+	g++ -o threads_error.out ${CCFLAGS} threads_error.cc ${LDFLAGS}
+threads_passing: threads_passing.cc
+	g++ -o threads_passing.out ${CCFLAGS} threads_passing.cc ${LDFLAGS}
+threads_return: threads_return.cc
+	g++ -o threads_return.out ${CCFLAGS} threads_return.cc ${LDFLAGS}
+threads_comm1:threads_comm1.cc
+	g++ -o threads_comm1.out ${CCFLAGS} threads_comm1.cc ${LDFLAGS}
+threads_packaged: threads_packaged.cc
+	g++ -o threads_packaged.out ${CCFLAGS} threads_packaged.cc ${LDFLAGS}
 
 
 
